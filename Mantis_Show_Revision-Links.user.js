@@ -8,7 +8,7 @@
 // @version      0.1.0
 // ==/UserScript==
 
-var url=http://svn.atrics.loc/viewvc/repository?view=revision&revision=
+var url="http://svn.atrics.loc/viewvc/repository?view=revision&revision="
 
 function makeCodeLinks()
 {
