@@ -5,7 +5,7 @@
 // @namespace   http://www.phiworld.de
 // @include     http://tracker.atrics.loc/view.php*
 // @grant       none
-// @version      0.1.1
+// @version      0.1.2
 // ==/UserScript==
 
 var url="http://svn.atrics.loc/viewvc/repository?view=revision&revision="
@@ -20,7 +20,7 @@ function makeCodeLinks()
   {
     var form = formElements[i];
     var html = form.innerHTML;
-    html = html.replace(/(r|rev. |rev.|Revision |revision )([0-9]+)/g, " <a href=\"" + url + "\$2\" alt=\"look at that beautiful code!\">r\$2</a>");
+    html = html.replace(/[^a-zA-Z](r|rev. |rev.|Revision |revision )([0-9]+)/g, " <a href=\"" + url + "\$2\" title=\"look at that beautiful code!\">Revision \$2</a>");
     form.innerHTML = html;    
   }
 }
